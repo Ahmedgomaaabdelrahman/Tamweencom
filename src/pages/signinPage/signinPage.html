@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+     <h1 class="head1">
+      <!--{{'Member Login'|translate}}-->
+          </h1>
+      <!--<ion-icon  ios="ios-cart" md="md-cart" class="carticon"  (click)="getCart()"></ion-icon>-->
+      <div style="display: inline">
+        <img src="assets/img/search.png" (click)="search()"class="search">
+      </div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="signins">
+    <div class="title" style="background-image: url('assets/img/title_b_250.png')">{{'Member Login'|translate}}</div>
+    <ion-list>
+    	<div class="inp-ico">
+    		<div class="inp-icon">
+    			<ion-icon name="person"></ion-icon>
+    		</div>
+    		<div class="inp-input">
+			  <ion-item>
+			    <ion-label floating>{{'E-Mail'|translate}}</ion-label>
+			    <ion-input type="email" [(ngModel)]="email"  name="email"></ion-input>
+			  </ion-item>
+			</div>
+		</div>
+	  	<div class="inp-ico">
+    		<div class="inp-icon">
+    			<ion-icon name="lock"></ion-icon>
+    		</div>
+    		<div class="inp-input">
+			  <ion-item>
+			    <ion-label floating>{{'Password'|translate}}</ion-label>
+			    <ion-input type="password" name="password" [(ngModel)]="password"></ion-input>
+			  </ion-item>
+			</div>
+		</div>
+		<div class="forget" (click)="forgetPassword()">
+			<u>{{'Forgot Password'|translate}}</u>
+		</div>
+
+	</ion-list>
+    <div class="btn-sig" (click)="login()">
+      <div style="background-image: url('assets/img/btn_200.png')" >{{'Sign-In'|translate}}</div>
+    </div>
+    <div class="btn-sig" (click)="signup()">
+      <div style="background-image: url('assets/img/btn_b_200.png')">{{'Sign-Up'|translate}}</div>
+    </div>
+    <div class="skip" (click)="skip()">
+      <div >{{'Skip'|translate}}</div>
+    </div>
+  </div>
+</ion-content>

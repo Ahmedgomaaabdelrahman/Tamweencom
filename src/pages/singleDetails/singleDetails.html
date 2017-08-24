@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+   <h1 class="head1">
+            {{'Product'|translate}}
+          </h1>
+           <p class="cartNo">{{cartNo.cartNo}}</p>
+      <ion-icon  ios="ios-cart" md="md-cart" class="carticon"  (click)="getCart()"></ion-icon>
+      <div style="display: inline">
+        <img src="assets/img/search.png" (click)="search()"class="search">
+      </div>
+    </ion-title>
+
+  </ion-navbar>
+</ion-header>
+<ion-content class="product">
+  <ion-card>
+    <div class="single-item">
+      <div class="itemHolder" >
+        <div class="img-holder">
+          <img src={{productpicpath}}>
+        </div>
+        <div class="itemText">
+          <div class="itemName">{{productname}}</div>
+          <div class="itemPrice">{{productprice}}</div>
+        </div>
+        <div class="controls">
+          <div class="add-cart">
+            <img src="assets/img/cart.png" (click)="addToCart(productID)">
+          </div>
+          <div class="add-wish">
+            <img src="assets/img/wish.png" (click)="addToWish(productID)">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="single-item">
+      <table class="table-details">
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </ion-card>
+  <ion-card>
+    <h1 *ngIf="globallService.language == 'ar'" style="text-align: end" class="titleh">{{'Descrption'|translate}}</h1>
+    <h1 *ngIf="globallService.language == 'en'" style="text-align: start"  class="titleh">{{'Descrption'|translate}}</h1>
+    <p class="textp"><strong>{{productname}}</strong>{{details}}.</p>
+ </ion-card>
+
+</ion-content>

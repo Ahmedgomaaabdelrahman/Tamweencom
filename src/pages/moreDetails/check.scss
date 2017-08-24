@@ -1,0 +1,21 @@
+check {
+  background-color: #eee;
+  .back{
+    margin-left: 39%;
+  }
+  .item-wrapper{
+    height: 135px;
+    padding: 5px;
+    .image{
+      width: 145px;
+      float: left;
+      margin-right: 10px;
+      img{
+        margin-top: 5px;
+        height: 125px;
+        width: 125px;
+        margin-left: 20px;
+      }
+    }
+  }
+}

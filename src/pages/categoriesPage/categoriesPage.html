@@ -1,0 +1,11 @@
+<div class="categories">
+  <div class="category" *ngFor="let cat of productsName" (click)="gotoProductID(cat.categoryid)">
+
+    <img src="{{cat.picpath}}"/>
+    <h1>
+      {{cat.categoryname}}
+    </h1>
+
+  </div>
+</div>
+

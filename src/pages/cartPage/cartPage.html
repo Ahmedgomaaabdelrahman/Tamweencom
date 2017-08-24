@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+  <h1 class="myhead">  {{'Shopping Cart'|translate}} </h1>
+   <div style="display: inline">
+        <img src="assets/img/search.png" (click)="search()"class="search">
+      </div>
+</ion-navbar>
+</ion-header>
+<ion-content style="background-color: #eee;">
+  <ion-card *ngFor="let product of products">
+    <div class="item-wrapper">
+      <div class="image">
+        <img src="{{product.picpath}}">
+      </div>
+      <h1 class="head">{{product.productname}} <span> {{product.price}}</span></h1>
+      <div class="cHolder">
+        <div class="counter">
+          <div class="left-counter">{{product.quantity}}</div>
+          <div class="counter-arrows">
+            <div class="arrow-up" style="background: url('assets/img/up.png') no-repeat center; background-size: 10px 10px;"
+                 (click)="addQuantity(product.productid)"></div>
+
+            <div class="arrow-down" style="background: url('assets/img/down.png') no-repeat center; background-size: 10px 10px;"
+                 (click)="decreaseQuantity(product.orderid)"></div>
+          </div>
+        </div>
+      </div>
+      <div class="close" (click)="deleteItem(product.orderid)" ><ion-icon name="trash" class="remove"></ion-icon></div>
+    </div>
+  </ion-card>
+  <ion-card>
+    <table>
+      <tbody>
+      <tr>
+        <td>{{'Grand Total'|translate}}</td>
+        <td>{{subTotal}} QAR</td>
+      </tr>
+      </tbody>
+    </table>
+  </ion-card>
+
+  <button class="btn-sig" (click)="checkout()" [disabled]="subTotal == 0">
+    <div style="background-image: url('assets/img/btn_200.png')">{{'To Checkout'|translate}}</div>
+  </button>
+</ion-content>

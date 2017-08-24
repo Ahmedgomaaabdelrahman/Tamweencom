@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+   <h1 class="head1">
+            {{'Conditions of use'|translate}}
+          </h1>
+         <p class="cartNo">{{cartNo.cartNo}}</p>
+      <ion-icon  ios="ios-cart" md="md-cart" class="carticon"  (click)="getCart()"></ion-icon>
+      <div style="display: inline">
+        <img src="assets/img/search.png" (click)="search()"class="search">
+      </div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="terms">
+    <div class="title" style="background-image: url('assets/img/title_b_250.png')">{{"Conditions of use"|translate}}</div>
+    <h1 *ngIf = "globallService.language == 'en'" class="titleh">1. {{privacyTitle}}</h1>
+    <h1 *ngIf = "globallService.language == 'ar'" 
+         style="text-align:right"  class="titleh">1. {{privacyTitle}}</h1>
+
+    <p *ngIf = "globallService.language == 'en'" class="textp">{{privacyText}}</p>
+    <p 
+*ngIf = "globallService.language == 'ar'" style="text-align:right"  class="textp">{{privacyText}}</p>
+
+   
+    <h1 *ngIf = "globallService.language == 'en'" class="titleh">2. {{termsTitle}}</h1>
+    <h1 
+*ngIf = "globallService.language == 'ar'" style="text-align:right"  class="titleh">2. {{termsTitle}}</h1>
+
+    <p *ngIf = "globallService.language == 'en'" class="textp">{{termsText}}</p>
+    <p 
+*ngIf = "globallService.language == 'ar'" style="text-align:right"  class="textp">{{termsText}}</p>
+
+    <h1 *ngIf = "globallService.language == 'en'" class="titleh">3. {{faqTitle}}</h1>
+    <h1 
+*ngIf = "globallService.language == 'ar'" style="text-align:right"  class="titleh">3. {{faqTitle}}</h1>
+
+    <p *ngIf = "globallService.language == 'en'" class="textp">{{faqText}}</p>
+    <p 
+*ngIf = "globallService.language == 'ar'" style="text-align:right"  class="textp">{{faqText}}</p>
+
+    <h1 *ngIf = "globallService.language == 'en'" class="titleh">4. {{policyTitle}}</h1>
+    <h1 
+*ngIf = "globallService.language == 'ar'" style="text-align:right"  class="titleh">4. {{policyTitle}}</h1>
+
+    <p *ngIf = "globallService.language == 'en'" class="textp">{{policyText}}</p>
+    <p
+*ngIf = "globallService.language == 'ar'" style="text-align:right"  class="textp">{{policyText}}</p>
+  </div>
+</ion-content>
+

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+   <h1 class="head1">
+            {{'Categories'|translate}}
+          </h1>
+          <p class="cartNo">{{cartNo.cartNo}}</p>
+      <ion-icon  ios="ios-cart" md="md-cart" class="carticon"  (click)="getCart()"></ion-icon>
+      <div style="display: inline">
+        <img src="assets/img/search.png" (click)="search()"class="search">
+      </div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="categories">
+    <div class="category" *ngFor="let cat of productsName" (click)="gotoProductID(cat.categoryid)">
+                <img src="{{cat.picpath}}"/>
+                  <h1>
+                    {{cat.categoryname}}
+                  </h1>
+    </div>
+</div>
+</ion-content>

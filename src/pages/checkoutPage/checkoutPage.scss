@@ -1,0 +1,54 @@
+checkoutPage {
+  .checkout{
+    background-color: #eee;
+    .nopadding{
+      padding-bottom: 0px;
+      label{
+        color: #999;
+      }
+    }
+    .showmap{
+      float: right;
+      width: 50%;
+      padding: 5px;
+      line-height: 20px;
+      background-color: #64bf77;
+      box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.4);
+      color: #fff;
+      .btn-icon{
+        font-size: 42px;
+        float: right;
+        margin-top: -19px;
+        margin-right: 5px;
+      }
+    }
+    .sinfo{
+            width: 50%;
+            max-width: 48%;
+            font-size: 14px;
+            float: left;
+    }
+
+    .btn-sig{
+      width: 100%;
+      display: block;
+      text-align: center;
+      div{
+        color:#fff;
+        width: 180px;
+        height: 46px;
+        line-height: 46px;
+        vertical-align: middle;
+        background-color: transparent;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 180px 46px;
+        letter-spacing: 1.5px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        font-size: 5vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+historyPage {
+   .carticon{
+    float: right;
+    padding-right: 4%;
+    font-size: 33px;
+    position: fixed;
+    right: 0px;
+    top: 22%;
+    color: #65c178;
+}
+.head1{
+  display: inline-block !important;
+  margin-top: 9px !important;
+  color: white;
+}
+.search{
+        float: right;
+        position: fixed;
+        height: 25px;
+        right: 18%;
+        top: 33%;
+        font-size: 2.2em !important;
+        color: #65c178;
+      }
+  .history{
+    background-color: #eee;
+    .nobg{
+      margin: 0 auto;
+      margin-top:  15px;
+      table{
+        border-collapse: collapse;
+        border: none;
+        width: 100%;
+        tbody{
+          tr{
+            line-height: 26px;
+            td:first-child{
+              padding: 0px 7px;
+              width: auto;
+            }
+            td:last-child{
+              padding: 0px 5px;
+              width: 84px;
+              line-height: 12px;
+              padding-bottom: 10px;
+            }
+            .h-date{
+              color:#999;
+              font-size: 14px;
+            }
+            .h-delivered{
+              color:#64bf77;
+              font-size: 15px;
+              line-height: 30px;
+            }
+            .h-id{
+              color:#999;
+              font-size: 18px;
+            }
+            .h-total{
+              display: block;
+              color: #999;
+              font-size: 13px;
+            }
+            .h-price{
+              color: #64bf77;
+              font-size: 12px;
+            }
+
+          }
+        }
+      }
+    }
+  }
+  .cartNo {
+    display: inline;
+    font-size: 12px;
+    position: fixed;
+    top: -15px;
+    right: 35px;
+    z-index: 10;
+    border: 1px solid black;
+    padding: 4px;
+    border-radius: 50%;
+}
+}

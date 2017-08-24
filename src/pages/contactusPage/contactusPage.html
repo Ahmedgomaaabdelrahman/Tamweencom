@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+   <h1 class="head1">
+            {{'Contact us'|translate}}
+          </h1>
+          <p class="cartNo">{{cartNo.cartNo}}</p>
+      <ion-icon  ios="ios-cart" md="md-cart" class="carticon"  (click)="getCart()"></ion-icon>
+      <div style="display: inline">
+        <img src="assets/img/search.png" (click)="search()"class="search">
+      </div>
+    </ion-title>
+
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <!--<button ion-button navPop>Go Back</button>-->
+  <div class="contactus">
+    <div class="title" style="background-image: url('assets/img/title_b_250.png')">Contact Us</div>
+    <ion-list>
+      <div class="inp-ico">
+        <div class="inp-icon">
+          <ion-icon name="person"></ion-icon>
+        </div>
+        <div class="inp-input">
+          <ion-item>
+            <ion-label floating>{{'Name'|translate}}</ion-label>
+            <ion-input type="text" [(ngModel)]="name"></ion-input>
+          </ion-item>
+        </div>
+      </div>
+      <div class="inp-ico">
+        <div class="inp-icon">
+          <ion-icon name="mail"></ion-icon>
+        </div>
+        <div class="inp-input">
+          <ion-item>
+            <ion-label floating>{{'E-Mail'|translate}}</ion-label>
+            <ion-input type="email" [(ngModel)]="email"></ion-input>
+          </ion-item>
+        </div>
+      </div>
+      <div class="inp-ico">
+        <div class="inp-icon">
+          <ion-icon name="call"></ion-icon>
+        </div>
+        <div class="inp-input">
+          <ion-item>
+            <ion-label floating>{{'Phone'|translate}}</ion-label>
+            <ion-input type="tel" [(ngModel)]="phone"></ion-input>
+          </ion-item>
+        </div>
+      </div>
+      <div class="inp-ico ta">
+        <div class="inp-icon">
+          <ion-icon name="chatbubbles"></ion-icon>
+        </div>
+        <div class="inp-input">
+          <ion-item>
+            <ion-label floating>{{'Message'|translate}}</ion-label>
+            <ion-textarea rows="3" [(ngModel)]="message"></ion-textarea>
+          </ion-item>
+        </div>
+      </div>
+    </ion-list>
+    <div class="btn-sig" (click)="sendMessage()">
+      <div style="background-image: url('assets/img/btn_200.png')">
+        <ion-icon name="send"></ion-icon>
+        Send
+      </div>
+    </div>
+  </div>
+</ion-content>

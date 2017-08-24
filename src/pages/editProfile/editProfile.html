@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <h1 class="head1">
+          {{'Edit Profile'|translate}}
+          </h1>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="signups">
+    <ion-list>
+    	<div class="inp-ico">
+    		<div class="inp-icon">
+    			<ion-icon name="person"></ion-icon>
+    		</div>
+    		<div class="inp-input">
+			  <ion-item>
+			    <ion-label floating>{{'Name'|translate}}</ion-label>
+			    <ion-input type="text" [(ngModel)]="user.username" name="username" ngControl="username"></ion-input>
+			  </ion-item>
+			</div>
+		</div>
+        <div class="inp-ico">
+            <div class="inp-icon">
+                <ion-icon name="mail"></ion-icon>
+            </div>
+            <div class="inp-input">
+              <ion-item>
+                <ion-label floating>{{'E-Mail'|translate}}</ion-label>
+                <ion-input type="email" [(ngModel)]="user.email"  name="email"></ion-input>
+              </ion-item>
+            </div>
+        </div>
+	  	<div class="inp-ico">
+    		<div class="inp-icon">
+    			<ion-icon name="lock"></ion-icon>
+    		</div>
+    		<div class="inp-input">
+			  <ion-item>
+			    <ion-label floating>{{'Password'|translate}}</ion-label>
+			    <ion-input type="password" name="password" [(ngModel)]="user.password"></ion-input>
+			  </ion-item>
+			</div>
+		</div>
+        <div class="inp-ico">
+            <div class="inp-icon">
+                <ion-icon name="phone-portrait"></ion-icon>
+            </div>
+            <div class="inp-input">
+              <ion-item>
+                <ion-label floating>{{'Phone'|translate}}</ion-label>
+                <ion-input type="tel" name="mobilephone" [(ngModel)]="user.phone"></ion-input>
+              </ion-item>
+            </div>
+        </div>
+
+    </ion-list>
+    <div class="btn-sig" (click)="editProfileInfo()">
+      <div class="sig-btn" style="background-image: url('assets/img/btn_b_200.png')" >{{'Save'|translate}}</div>
+    </div>
+
+  </div>
+</ion-content>

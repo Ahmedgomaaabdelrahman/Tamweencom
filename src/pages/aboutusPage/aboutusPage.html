@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+   <h1 class="head1">
+             {{'About us'|translate}}
+          </h1>
+       <p class="cartNo">{{cartNo.cartNo}}</p>
+      <ion-icon  ios="ios-cart" md="md-cart" class="carticon"  (click)="getCart()"></ion-icon>
+      <div style="display: inline">
+        <img src="assets/img/search.png" (click)="search()"class="search">
+      </div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="aboutus">
+    <div class="title" style="background-image: url('assets/img/title_b_250.png')">{{'About Us'|translate}}</div>
+    <div class="logo"><img src="assets/img/logo_text.png"></div>
+    <h1 class="titleh">Tamweencom...</h1>
+    <p  *ngIf = "globallService.language == 'en'" class="textp"><strong>{{title}}</strong>{{mytext}}</p>
+    <p  *ngIf = "globallService.language == 'ar'" style="text-align:right" class="textp"><strong>{{title}}</strong>{{mytext}}</p>
+    <p class="version">Version 1.0.0</p>
+    <p class="copy">Copyrights Tamweencom&copy; 2016</p>
+  </div>
+</ion-content>

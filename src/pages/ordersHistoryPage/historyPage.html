@@ -1,0 +1,48 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+   <h1 class="head1">
+           {{'My Orders'|translate}}
+          </h1>
+            <p class="cartNo">{{cartNo.cartNo}}</p>
+      <ion-icon  ios="ios-cart" md="md-cart" class="carticon"  (click)="getCart()"></ion-icon>
+      <div style="display: inline">
+        <img src="assets/img/search.png" (click)="search()"class="search">
+      </div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="history">
+  <ion-card *ngFor="let order of ordersHistory" class="nobg" (click)="moreDetails(order.checkoutid)">
+    <table>
+      <tbody>
+      <tr>
+        <td>
+          <span class="h-date">
+            <ion-icon name="calendar"></ion-icon>  {{order.created}}
+          </span>
+        </td>
+        <td>
+          <span class="h-delivered">{{order.status}}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+           <span class="h-total">{{'Address:'|translate}}</span>
+          <span class="h-price">{{order.address}}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="h-id">{{'Order ID: '|translate}}{{order.checkoutid}}</span>
+        </td>
+        <td>
+          <span class="h-total">{{'Total Price'|translate}}</span>
+          <span class="h-price">{{order.price}} QAR</span>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </ion-card>
+</ion-content>

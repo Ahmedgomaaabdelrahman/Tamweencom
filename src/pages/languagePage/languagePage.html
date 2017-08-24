@@ -1,0 +1,23 @@
+<ion-header class="i-header">
+  <div class="i-nav">
+    <div class="fix-nav"></div>
+    <div class="nav-body">
+      <img src="assets/img/menu.png" menuToggle class="left"/>
+      <h1 class="p-title">
+        {{'Language'|translate}}
+      </h1>
+    </div>
+    <div class="fix-nav-bottom"></div>
+  </div>
+</ion-header>
+<ion-content>
+  <div class="languages">
+    <img src="assets/img/logo_text.png">
+    <div class="btn-lan" (click)="setLanguage('ar')">
+      <div style="background-image: url('assets/img/btn_200.png')">عربي</div>
+    </div>
+    <div class="btn-lan" (click)="setLanguage('en')">
+      <div style="background-image: url('assets/img/btn_b_200.png')">English</div>
+    </div>
+  </div>
+</ion-content>

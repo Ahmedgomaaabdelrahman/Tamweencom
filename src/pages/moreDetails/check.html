@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{'Orders'|translate}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content style="background-color: #eee;">
+  <ion-card *ngFor="let product of products">
+    <div class="item-wrapper">
+      <div class="image">
+        <img [src]="product.picpath">
+      </div>
+      <span><strong>ProductName: </strong></span>
+      <span>{{product.productname}}</span>
+      <br>
+      <span><strong>Quantity: </strong></span>
+      <span>{{product.quantity}}</span>
+      <br>
+      <span><strong>Price: </strong></span>
+      <span>{{product.price}}</span>
+      <br>
+      <button class="back" ion-button small (click)="details(product.productid)">more Details</button>
+    </div>
+  </ion-card>
+
+</ion-content>

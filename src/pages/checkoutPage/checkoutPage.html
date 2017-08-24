@@ -1,0 +1,59 @@
+<ion-header class="i-header">
+   <ion-navbar>
+    <ion-title>
+   <h1 class="myhead">
+        {{'Checkout'|translate}}
+      </h1>
+    </ion-title>
+  </ion-navbar>    
+</ion-header>
+<ion-content class="checkout">
+  <ion-card>
+    <ion-card-header class="nopadding">
+      {{'Payment Method'|translate}}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list radio-group no-lines [(ngModel)]="payment">
+        <ion-item>
+          <ion-label>{{'Cash on Delivery'|translate}}</ion-label>
+          <ion-radio  value="cod" checked="true"></ion-radio>
+        </ion-item>
+         </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header class="nopadding">
+      <div class="sinfo">
+      {{'Shipping Information'|translate}}<br><label>{{moneyTotal}} QAR</label>
+      </div>
+      <div (click)="showMap()" class="showmap">{{'Show Google'|translate}}<br>{{'Map Location'|translate}}
+         <ion-icon class="btn-icon" name="pin"></ion-icon>
+      </div>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list inset>
+       <ion-item>
+          <ion-label >{{'Address'|translate}}</ion-label>
+          <ion-input [(ngModel)]="address" type="text"></ion-input>
+        </ion-item>
+     </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header class="nopadding">
+      {{'Order Review'|translate}}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list inset>
+        <ion-item>
+          <ion-label >{{'Leave Comment'|translate}}
+          </ion-label>
+          <ion-textarea [(ngModel)]="comment" rows="2"></ion-textarea>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <div class="btn-sig" (click)="submitOrder()">
+    <div style="background-image: url('assets/img/btn_200.png')">{{'Finalize Order'|translate}}</div>
+  </div>
+</ion-content>

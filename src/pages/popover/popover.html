@@ -1,0 +1,7 @@
+<ion-list no-lines class="p-list">
+  <button ion-item *ngFor="let p of pages"  class="p-btn {{p.atv}}" (click)="close(p)">
+    <!--(click)="close()"-->
+    <ion-icon name="{{p.icon}}" class="p-icon"></ion-icon>
+    {{p.title|translate}}
+  </button>
+</ion-list>

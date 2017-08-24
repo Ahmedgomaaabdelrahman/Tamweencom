@@ -1,0 +1,71 @@
+<ion-header class="i-header">
+  <div class="i-nav">
+    <div class="fix-nav"></div>
+    <div class="nav-body">
+     <p class="cartNo">{{cartNo.cartNo}}</p>
+      <img src="assets/img/menu.png" menuToggle class="left"/>
+      <h1 class="p-title">
+        {{'Home'|translate}}
+      </h1>
+      <div style="display: inline">
+           
+        <ion-icon  ios="ios-cart" md="md-cart" class="carticon" (click)="getCart()"></ion-icon>
+        <img src="assets/img/search.png" (click)="search()" class="search">
+      </div>
+    </div>
+    <div class="fix-nav-bottom"></div>
+  </div>
+</ion-header>
+
+<ion-content has-header>
+  <div class="divya"></div>
+  <ion-slides #mySlider [options]="mySlideOptions" class="myslider">
+    <ion-slide *ngFor="let s of productsName" class="slideImg"
+               [ngStyle]="{'background-image': 'url(' + s.picpath + ')'
+               ,    '-webkit-background-size': '100% 100%', '-moz-background-size': '100% 100%'
+               ,'-o-background-size': '100% 100%', 'background-size': '100% 100%'
+               ,'backgroundRepeat': 'no-repeat', 'backgroundPosition': 'center'}">
+    </ion-slide>
+    <h1 class="slideText">
+      <div class="active"></div>
+      <div></div>
+    </h1>
+  </ion-slides>
+  <div >
+    <div class="sliderNav">
+      <div class="sNavItem" (click)="setRouter('Categories')">
+        <a class="mynav">
+          <img src="assets/img/categories_36.png" class="snIcon">
+          <span style="color:black">{{'Categories'|translate}}</span>
+        </a>
+      </div>
+      <div class="sNavItem" (click)="setRouter('NewArrivals')">
+        <a class="mynav">
+          <img src="assets/img/new_36.png" class="snIcon">
+          <span style="color:black">{{'New Arrivals'|translate}}</span>
+        </a>
+      </div>
+      <div class="sNavItem" (click)="setRouter('HotOffers')">
+        <a class="mynav">
+          <img src="assets/img/hot_36.png" class="snIcon">
+          <span style="color:black">{{'Hot Offers'|translate}}</span>
+        </a>
+      </div>
+      <div class="sNavItem" (click)="setRouter('BestOffers')">
+        <a class="mynav">
+          <img src="assets/img/best_36.png" class="snIcon">
+          <span style="color:black">{{'Best Offers'|translate}}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div [ngSwitch]="routerContent">
+
+
+    <categoriesPage value="Categories" *ngSwitchCase="'Categories'"></categoriesPage>
+    <newArrivals value="NewArrivals" *ngSwitchCase="'NewArrivals'"></newArrivals>
+    <hotoffers value="HotOffers" *ngSwitchCase="'HotOffers'"></hotoffers>
+    <bestoffers value="BestOffers" *ngSwitchCase="'BestOffers'"></bestoffers>
+
+  </div>
+</ion-content>

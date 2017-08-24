@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+   <h1 class="head1">
+          {{'Wish List'|translate}}
+          </h1>
+      <p class="cartNo">{{cartNo.cartNo}}</p>
+      <ion-icon  ios="ios-cart" md="md-cart" class="carticon"  (click)="getCart()"></ion-icon>
+      <div style="display: inline">
+        <img src="assets/img/search.png" (click)="search()"class="search">
+      </div>
+    </ion-title>
+
+  </ion-navbar>
+</ion-header>
+ <ion-content>
+
+<div>
+<ion-row  *ngFor="let product of products" class="rowwing">
+  <ion-col  col-3>
+    <div style="height:100%" (click)="details(product.productid)">
+    <img src="{{product.picpath}}" height="100%" width="100px">
+  </div>
+  </ion-col>
+  <ion-col  col-3>
+      <ion-row>
+        <ion-col col-3><div style="margin: 10px;color:green">{{product.price}}</div></ion-col>
+        <ion-col col-6></ion-col>
+        <ion-col col-3 style="text-align:end ;"><img src="assets/img/cart.png" (click)="addToCart(product.productid)"></ion-col>
+      </ion-row>
+          <div style="margin: 10px;">{{product.productname}}</div>
+      <ion-row>
+            <ion-col col-9>
+
+             </ion-col>
+             <ion-col col-3  (click)="removeWish(product.wishlistid)" style="text-align:end ; padding:0 10px">
+
+               <ion-icon style="padding-right: 5px;font-size: 35px;" name="trash"></ion-icon></ion-col>
+      </ion-row>
+  </ion-col>
+</ion-row>
+</div>
+
+  <!-- <div class="items-view">
+
+    <div class="single-item" *ngFor="let product of products">
+      <div class="itemHolder">
+        <img src="{{product.picpath}}" class="item-img">
+        <div class="itemText">
+          <div class="itemName">{{product.productname}}</div>
+          <div class="itemPrice">{{product.price}}</div>
+        </div>
+        <div class="controls">
+          <div class="add-cart" (click)="addToCart(product.productid)">
+            <img src="assets/img/cart.png">
+          </div>
+          <div  class="add-wish" (click)="removeWish(product.wishlistid)">
+            <ion-icon name="trash"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+</ion-content>
+
+
+  <!--<engine name="ios" spec="^4.4.0" />
+    <preference name="orientation" value="portrait" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="16" />
+    <preference name="BackupWebStorage" value="none" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="FadeSplashScreenDuration" value="1000" />
+    <preference name="ShowSplashScreenSpinner" value="true" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="SplashScreen" value="screen" />-->

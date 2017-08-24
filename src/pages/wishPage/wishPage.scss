@@ -1,0 +1,213 @@
+wishPage {
+  // Items Style
+  .carticon{
+    float: right;
+    padding-right: 4%;
+    padding-top: 7px;
+    font-size: 33px;
+    position: fixed;
+    right: 0px;
+    color: #65c178;
+}
+.head1{
+  display: inline-block !important;
+  margin-top: 9px !important;
+  color: white;
+}
+ .rowwing{
+    border: 1px solid #5c6062;
+    margin: 10px auto;
+    width: 92%;
+    min-height: 0px;
+    height: 150px;
+    max-height: 155px;
+    border-radius: 10px;
+  }
+.search{
+        float: right;
+        position: fixed;
+        height: 25px;
+        right: 18%;
+        top: 33%;
+        font-size: 2.2em !important;
+        color: #65c178;
+      }
+  .scroll-content{
+    background-color: #f8f8f8;
+  }
+  .items-view{
+    position: relative;
+    display: block;
+    height: auto;
+    width: 100%;
+    margin: 5% auto;
+    padding-top: 10px;
+    .single-item{
+      width: 50%;
+      float: left;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      text-align: center;
+      .itemHolder{
+        width: 150px;
+        height: 190px;
+        margin: 0 auto;
+        background-color: #fff;
+        box-shadow: 0 0 3px 1px rgba(0,0,0,0.2);
+        .item-img{
+          margin: 0 auto;
+          width: 102px;
+          height: 102px;
+          margin-top: 8px;
+        }
+        .itemText{
+           height: 50px;
+        max-height: 50px;
+
+        width: 40%;
+        /* height: 48px; */
+        max-width: 40%;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        vertical-align: middle;
+
+          .itemName{
+             height: 23px;
+              max-height: 23px;
+              width: 100%;
+              overflow: hidden;
+              float: left;
+              font-weight: 700;
+              display: inline-block;
+              font-size: 16px;
+              color: #272727;
+          }
+          .itemPrice{
+            height: 21px;
+            width: 100%;
+            float: left;
+            font-size: 14px;
+            color: green;
+            font-style: normal;
+
+          }
+        }
+        .controls{
+          height: 30px;
+          width: 100%;
+          .add-cart{
+            width: 50%;
+            float: left;
+            img{
+              width: 20px;
+              margin: 0 auto;
+            }
+          }
+          .add-wish{
+            width: 50%;
+             float: right;
+
+            color: red;
+            font-size: 20px;
+            margin-top: 0px;
+            img{
+              width: 20px;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 320px) {
+    .items-view{
+      .single-item{
+        width: 50%;
+        .itemHolder{
+          width: 150px;
+          height: 190px;
+          .item-img{
+            width: 102px;
+            height: 102px;
+          }
+        }
+      }
+    }
+
+  }
+  @media only screen and (min-width: 412px) {
+    .items-view{
+      .single-item{
+        width: 50%;
+        .itemHolder{
+          width: 160px;
+          height: 200px;
+          .item-img{
+            width: 107px;
+            height: 107px;
+          }
+        }
+      }
+    }
+
+  }
+  @media only screen and (min-width: 528px) {
+    .items-view{
+      .single-item{
+        width: 33.333%;
+        .itemHolder{
+          width: 160px;
+          height: 200px;
+          .item-img{
+            width: 107px;
+            height: 107px;
+          }
+        }
+      }
+    }
+
+  }
+  @media only screen and (min-width: 768px) {
+    .items-view{
+      .single-item{
+        width: 33.333%;
+        .itemHolder{
+          width: 180px;
+          height: 220px;
+          .item-img{
+            width: 127px;
+            height: 127px;
+          }
+        }
+      }
+    }
+
+  }
+  @media only screen and (min-width: 1024px) {
+    .items-view{
+      .single-item{
+        width: 25%;
+        .itemHolder{
+          width: 185px;
+          height: 230px;
+          .item-img{
+            width: 132px;
+            height: 132px;
+          }
+        }
+      }
+    }
+  }
+  .cartNo {
+    display: inline;
+    font-size: 12px;
+    position: fixed;
+    top: -15px;
+    right: 35px;
+    z-index: 10;
+    border: 1px solid black;
+    padding: 4px;
+    border-radius: 50%;
+}
+}

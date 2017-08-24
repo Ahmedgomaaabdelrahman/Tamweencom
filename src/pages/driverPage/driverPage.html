@@ -1,0 +1,47 @@
+<ion-header class="i-header">
+  <div class="i-nav">
+  	<div class="fix-nav"></div>
+	<div class="nav-body">
+	    <img src="assets/img/menu.png" menuToggle class="left"/>
+	    <h1 class="p-title">
+        {{'Driver Orders'|translate}}
+	    </h1>
+	</div>
+	<div class="fix-nav-bottom"></div>
+  </div>
+</ion-header>
+<ion-content style="background-color: #eee;">
+  <ion-card class="resp" *ngFor="let driver of driverinfo">
+    <div class="item-wrapper">
+      <div class="image">
+        <img [src]="driver.picpath">
+      </div>
+      <span><strong>Client: </strong></span>
+      <span>{{driver.cilentname}}</span>
+      <br>
+      <span><strong>Mobile: </strong></span>
+      <a href="tel:{{driver.mobile}}">{{driver.mobile}}</a><br>
+      <span><strong>Address: </strong></span>
+      <span>{{driver.address}}</span> <button ion-button small (click)="showMap(driver.latitude,driver.longitude,driver.address)"><ion-icon name="pin"></ion-icon></button>
+      <br>
+
+      <span><strong>Map Coordinates: </strong></span>
+      <span class="selectable">{{driver.latitude}},</span><span class="selectable">{{driver.longitude}}</span>
+      <br>
+      <div class="inp-ico ta">
+        <div class="inp-icon">
+
+        </div>
+        <div class="inp-input">
+          <ion-item>
+            <ion-label floating>Comments</ion-label>
+            <ion-textarea rows="3" style="background-color: #eee" [(ngModel)]="comment[driver.checkoutid]"></ion-textarea>
+          </ion-item>
+        </div>
+      </div>
+      <br>
+      <button ion-button small (click)="confirmDriver(driver.checkoutid)">Receive</button>
+      <button ion-button small clear (click)="moreDetails(driver.checkoutid)">More Details</button>
+    </div>
+    </ion-card>
+</ion-content>

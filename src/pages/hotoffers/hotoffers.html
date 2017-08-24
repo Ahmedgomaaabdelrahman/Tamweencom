@@ -1,0 +1,62 @@
+<div *ngFor="let product of hotProducts">
+<ion-row    *ngIf="product.ads == 0" class="rowwing">
+  <ion-col  col-3>
+    <div style="height:100%" (click)="details(product.productid)"> 
+    <img src="{{product.picpath}}" style="height: 100%;width: 75%;min-height: 90%;max-height: 100%;">
+  </div>
+  </ion-col>
+  <ion-col  col-3>  
+      <ion-row>
+        <ion-col col-3><div style="margin: 10px;color:green">{{product.price}}</div></ion-col>
+        <ion-col col-6></ion-col>
+        <ion-col col-3 style="text-align:end ;">
+          <img src="assets/img/cart.png" (click)="addToCart(product.productid)">
+        </ion-col>
+      </ion-row>  
+          <div style="margin: 10px;">{{product.productname}}</div>
+      <ion-row>
+            <ion-col col-9>    
+             </ion-col>
+             <ion-col col-3 style="text-align:end ; padding:0 10px"><img src="assets/img/wish.png" (click)="addToWish(product.productid)"></ion-col>
+      </ion-row>             
+  </ion-col>
+</ion-row>
+
+ <div *ngIf="product.ads == 1" style="width: 90%;margin: 10px auto;"> 
+          <div>
+            <span style="display:block;">Ads</span>
+            <img src="{{product.picpath}}">
+          </div>
+        </div>
+</div>
+
+
+<!-- <div class="items-view" *ngFor="let product of hotProducts">
+  <div class="single-item" >
+    <div *ngIf="product.ads == 0">
+      <div class="itemHolder"  (click)="details(product.productid)">
+        <div class="img-holder">
+          <img src="{{product.picpath}}">
+        </div>
+      </div>
+      <div class="itemText">
+        <div class="itemPrice">{{product.price}}</div>
+        <div class="itemName">{{product.productname}}</div>
+      </div>
+      <div class="controls">
+        <div class="add-cart">
+          <img src="assets/img/cart.png"  (click)="addToCart(product.productid)">
+        </div>
+        <div class="add-wish">
+          <img src="assets/img/wish.png"(click)="addToWish(product.productid)">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="product.ads == 1">
+    <div class="single-item ads">
+      <span style="display:block;">Ads</span>
+      <img src="{{product.picpath}}">
+    </div>
+  </div>
+</div> -->

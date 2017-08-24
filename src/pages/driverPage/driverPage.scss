@@ -1,0 +1,38 @@
+driverPage {
+  background-color: #eee;
+  .resp{
+    margin-top: 10px;
+    .item-wrapper{
+      height: auto;
+      padding: 5px;
+      .image{
+        width: 145px;
+        height: 90%;
+        max-height:90%;
+        float: left;
+        margin-right: 10px;
+        img{
+          margin-top: 5px;
+          height: 125px;
+          width: 125px;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .resp{
+      width: 46%!important;
+      float: left!important;
+      .item-wrapper{
+        .image{
+          width: 100%;
+          text-align: center;
+          img{
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}

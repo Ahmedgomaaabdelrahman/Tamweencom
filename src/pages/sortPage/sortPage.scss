@@ -1,0 +1,26 @@
+sortPage {
+	.sorts{
+		background-color: #e7e7e7;
+		.btn-sig{
+			width: 100%;
+			float: left;
+			text-align: center;
+			div{
+				color:#fff;
+				width: 180px;
+				height: 46px;
+				line-height: 46px;
+				vertical-align: middle;
+				background-color: transparent;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: 180px 46px;
+				letter-spacing: 2.5px;
+				margin: 0 auto;
+				margin-bottom: 15px;
+				font-size: 22px;
+			}
+		}
+	}
+}
